@@ -1,11 +1,22 @@
 package com.natay.model;
 
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+@Entity
+@Table(name="PROFILE")
 public class Profile {
 
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @NotNull
     private String profileName;
+    @NotNull
     private String firstName;
+    @NotNull
     private String lastName;
 
     public Profile() {

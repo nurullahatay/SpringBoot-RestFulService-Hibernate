@@ -16,7 +16,7 @@ public class ProfileController {
 
     @RequestMapping("/profiles")
     public List<Profile> getAllProfiles(){
-        return profileService.getAllProfiles();
+        return (List<Profile>) profileService.getAllProfiles();
     }
 
     @RequestMapping("/profiles/{id}")
